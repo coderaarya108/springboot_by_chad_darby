@@ -1,10 +1,8 @@
 package com.example.springcoredemo.common;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
 public class FootballCoach implements Coach{
 
     public FootballCoach() {

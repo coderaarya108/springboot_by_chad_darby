@@ -1,18 +1,17 @@
 package com.example.springcoredemo.common;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
-public class FootballCoach implements Coach{
+public class SprintCoach implements Coach{
 
-    public FootballCoach() {
+
+    public SprintCoach() {
         System.out.println("Constructing " + getClass().getSimpleName() + "  !!");
     }
 
     @Override
     public String getDailyWorkout() {
-        return "Practice corner kick for 30mins ";
+        return "Run a hard 5k !!";
     }
 }

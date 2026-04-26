@@ -10,18 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     private Coach myCoach;
-    private Coach anotherCoach;
 
     @Autowired
-    public DemoController( @Qualifier("cricketCoach") Coach myCoach , @Qualifier("cricketCoach") Coach anotherCoach) {
+    public DemoController( @Qualifier("cricketCoach") Coach myCoach) {
         System.out.println("Constructing " + getClass().getSimpleName() + "  !!");
         this.myCoach = myCoach;
-        this.anotherCoach = anotherCoach;
-    }
-
-    @GetMapping("/checkcoachbeans")
-    public String checkCoachBeans() {
-        return "Comparing myCoach == anotherCoach : " + (myCoach == anotherCoach);
     }
 
     // Example of constructor injection with @Qualifier to specify which bean to inject
